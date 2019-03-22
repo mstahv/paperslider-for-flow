@@ -25,6 +25,19 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <scm>
+        <url>https://github.com/mstahv/paperslider-for-flow</url>
+        <connection>scm:git:git://github.com/mstahv/paperslider-for-flow.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:/mstahv/paperslider-for-flow.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/mstahv/paperslider-for-flow/issues</url>
+    </issueManagement>
+
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -48,7 +61,7 @@
             <url>http://maven.vaadin.com/vaadin-prereleases</url>
         </repository>
         <!-- The bintray repository contain webjars immediately after generation. If the webjar is available
-             in Maven central, you do not need this repository -->
+        in Maven central, you do not need this repository -->
         <repository>
             <id>webjars</id>
             <url>https://dl.bintray.com/webjars/maven</url>
@@ -66,8 +79,8 @@
             <scope>test</scope>
         </dependency>
         <!-- The following dependency is generated using webjars.org. If 
-             it does not resolve, go to https://www.webjars.org and deploy it as "Bower GitHub"
-             -->
+        it does not resolve, go to https://www.webjars.org and deploy it as "Bower GitHub"
+        -->
         <dependency>
             <groupId>org.webjars.bowergithub.polymerelements</groupId>
             <artifactId>paper-slider</artifactId>
@@ -108,18 +121,27 @@
                 <configuration>
                     <scanIntervalSeconds>-1</scanIntervalSeconds>
                     <!-- Use test scope because the UI/demo classes are in 
-                        the test package. -->
+                    the test package. -->
                     <useTestScope>true</useTestScope>
                     <supportedPackagings>
-                    <supportedPackaging>jar</supportedPackaging>
+                        <supportedPackaging>jar</supportedPackaging>
                     </supportedPackagings>
                     <webAppConfig>
                         <!-- This is only needed to be able to unzip webjars 
-                            directly into src/test/webjar-debug and modify them for testing -->
+                        directly into src/test/webjar-debug and modify them for testing -->
                         <resourceBase>src/test/webjar-debug/META-INF/resources</resourceBase>
                     </webAppConfig>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <releaseProfiles>directory</releaseProfiles>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
