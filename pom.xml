@@ -3,7 +3,7 @@
 
     <groupId>org.vaadin.matti</groupId>
     <artifactId>paperslider-for-flow</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <name>PaperSlider for Flow</name>
     <description>Integration of paper-slider for Vaadin platform</description>
 
@@ -29,7 +29,7 @@
         <url>https://github.com/mstahv/paperslider-for-flow</url>
         <connection>scm:git:git://github.com/mstahv/paperslider-for-flow.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/mstahv/paperslider-for-flow.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>paperslider-for-flow-1.1</tag>
     </scm>
 
     <issueManagement>
