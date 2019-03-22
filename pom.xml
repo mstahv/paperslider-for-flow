@@ -148,6 +148,10 @@
     <profiles>
         <profile>
             <id>directory</id>
+            <properties>
+                <!-- Uploading manually to Vaadin directory -->
+                <maven.deploy.skip>true</maven.deploy.skip>
+            </properties>
             <build>
                 <plugins>
                     <plugin>
