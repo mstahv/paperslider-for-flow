@@ -13,7 +13,7 @@ public class PaperSlider extends Component implements Field<PaperSlider, Integer
         Field.initSingleProperty(this, 0, "value");
     }
 
-    void setMax(int max) {
+    public void setMax(int max) {
         getElement().setProperty("max", max);
     }
 }
